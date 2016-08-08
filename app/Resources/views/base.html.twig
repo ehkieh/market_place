@@ -67,17 +67,17 @@
                                 {% set usuarioLogueado = null %}
                                 
                                 {% if usuarioLogueado == null %}
-                                <a href="{{ link_login }}">
+                                <a href="#">
                                     <button type="button" class="btn btn-primary">Login con Facebook</button>
                                 </a>
                                 {% else %}
                                     {{ usuarioLogueado.nombre }}
-                                    <a href="{{ link_logout }}">Desconectar</a>
+                                    <a href="#">Desconectar</a>
                                 {% endif %}
                             </li>
                             {% if usuarioLogueado != null %}
                             <li>
-                                <a href="{{ link_nuevoTrayecto }}">
+                                <a href="#">
                                     <button type="button" class="btn btn-default">Publica un trayecto</button>
                                 </a>
                             </li>
@@ -101,7 +101,7 @@
     <div class="footer" id="footer">
         <div class="container">
             <ul class=" pull-right navbar-link footer-nav">
-                <li> &copy; {{ year }} - development by Sopinet Software</li>
+                <li> &copy; 2016 - development by Sopinet Software</li>
             </ul>
         </div>
     </div>
