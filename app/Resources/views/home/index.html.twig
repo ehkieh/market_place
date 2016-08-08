@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    {{ parent() }}
+    - Página Principal
+{% endblock %}
+
+{% block contenido %}
+    {% include "home/_busquedaPrincipal.html.twig" %}
+    
+    {% include "home/_caracteristicas.html.twig" %}
+    
+    {% include "home/_estadisticas.html.twig" %}
+    
+    {% include "home/_contacto.html.twig" %}
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script type="text/javascript" src="assets/plugins/autocomplete/jquery.mockjax.js"></script>
+    <script type="text/javascript" src="assets/plugins/autocomplete/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="curso-assets/js/ciudades.js"></script>
+    
+    <script type="text/javascript" src="assets/plugins/autocomplete/autocomplete-demo.js"></script>
+{% endblock %}
