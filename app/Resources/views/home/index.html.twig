@@ -17,9 +17,9 @@
 
 {% block js %}
     {{ parent() }}
-    <script type="text/javascript" src="assets/plugins/autocomplete/jquery.mockjax.js"></script>
-    <script type="text/javascript" src="assets/plugins/autocomplete/jquery.autocomplete.js"></script>
-    <script type="text/javascript" src="curso-assets/js/ciudades.js"></script>
+    <script type="text/javascript" src=" {{asset('assets/plugins/autocomplete/jquery.mockjax.js') }}"></script>
+    <script type="text/javascript" src=" {{asset('assets/plugins/autocomplete/jquery.autocomplete.js') }}"></script>
+    <script type="text/javascript" src=" {{asset('curso-assets/js/ciudades.js') }}"></script>
     
-    <script type="text/javascript" src="assets/plugins/autocomplete/autocomplete-demo.js"></script>
+    <script type="text/javascript" src=" {{asset('assets/plugins/autocomplete/autocomplete-demo.js') }}"></script>
 {% endblock %}
