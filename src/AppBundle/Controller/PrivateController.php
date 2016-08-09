@@ -14,10 +14,11 @@ class PrivateController extends Controller
     public function nuevoTrayectoAction(Request $request)
     {
         /**
-         * 1. Habría que...
+         * Muestra un formulario para rellenar un nuevo Trayecto
          * 
          * 
-         * 
+         * 1. Habría que copiar los twig de nuevoTrayecto.html.twig
+         * 2. Y indicar en el render que se muestren
          * 
          * */
         die("Pendiente de hacer: Nuevo Trayecto");
@@ -29,8 +30,10 @@ class PrivateController extends Controller
     public function publicarTrayectoAction(Request $request)
     {
         /**
-         * 1. Habría que...
+         * Guarda los datos enviados por rayecto
          * 
+         * 1. Habría que guardar los datos recibiendos en $_GET en un nuevoTrayecto
+         * 2. Podríamos poner una redirección a HomeAction (pantalla principal) o a ListAction (a la pantalla de listado de trayectos)
          * 
          **/ 
         die("Pendiente de hacer");
