@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="shortcut icon" href="{{ asset('assets/ico/favicon.png') }}">
     <title>{% block title %}Comparte Tu Coche - Bienvenido a la plataforma de compartir coche{% endblock %}</title>
     
     {% block css %}
         <!-- Bootstrap core CSS -->
-        <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="{{ asset('assets/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
     
         <!-- Custom styles for this template -->
-        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
     
         <!-- styles needed for carousel slider -->
-        <link href="assets/css/owl.carousel.css" rel="stylesheet">
-        <link href="assets/css/owl.theme.css" rel="stylesheet">
+        <link href="{{ asset('assets/css/owl.carousel.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/owl.theme.css') }}" rel="stylesheet">
     {% endblock %}
 
     <!-- Just for debugging purposes. -->
@@ -116,26 +116,26 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
 </script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
 
 <!-- include carousel slider plugin  -->
-<script src="assets/js/owl.carousel.min.js"></script>
+<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
 
 <!-- include form-validation plugin || add this script where you need validation   -->
-<script src="assets/js/form-validation.js"></script>
+<script src="{{ asset('assets/js/form-validation.js') }}"></script>
 
 
 <!-- include equal height plugin  -->
-<script src="assets/js/jquery.matchHeight-min.js"></script>
+<script src="{{ asset('assets/js/jquery.matchHeight-min.js') }}"></script>
 
 <!-- include jquery list shorting plugin plugin  -->
-<script src="assets/js/hideMaxListItem.js"></script>
+<script src="{{ asset('assets/js/hideMaxListItem.js') }}"></script>
 
 <!-- include jquery.fs plugin for custom scroller and selecter  -->
-<script src="assets/plugins/jquery.fs.scroller/jquery.fs.scroller.js"></script>
-<script src="assets/plugins/jquery.fs.selecter/jquery.fs.selecter.js"></script>
+<script src="{{ asset('assets/plugins/jquery.fs.scroller/jquery.fs.scroller.js') }}"></script>
+<script src="{{ asset('assets/plugins/jquery.fs.selecter/jquery.fs.selecter.js') }}"></script>
 <!-- include custom script for site  -->
-<script src="assets/js/script.js"></script>
+<script src="{{ asset('assets/js/script.js') }}"></script>
 {% endblock %}
 </body>
 </html>
