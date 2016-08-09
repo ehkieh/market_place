@@ -30,8 +30,8 @@ class PublicController extends Controller
          * en el Controller del nuevo proyecto.
          **/
          
-         // Pendiente de hacer: Renderizar un nuevo twig para que se muestre el error y no se vea feo
-         // /building/index.html.twig y extienda de base.html.twig y diga algo como "Pagina en contruccion", despues borrar el die.
+         // Pendiente de hacer: Renderizar un nuevo twig para que se muestre el error y no se vea feo.
+         // Se puede crear en la ruta /building/index.html.twig y extienda de base.html.twig y diga algo como "Pagina en contruccion", despues borrar el die.
          die("Pendiente de hacer en casa");
     }
 }
