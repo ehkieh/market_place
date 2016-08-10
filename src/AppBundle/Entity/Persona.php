@@ -16,6 +16,17 @@ class Persona extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+    
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $avatar;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Trayecto", mappedBy="conductor")
+     */
+     protected $trayectos;
+
 
     public function __construct()
     {
