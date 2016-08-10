@@ -12,3 +12,31 @@
 [10-Aug-2016 07:19:53 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/market_place/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:182
 [10-Aug-2016 07:19:53 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->initializeBundles() /home/ubuntu/workspace/market_place/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:130
 [10-Aug-2016 07:19:53 UTC] PHP   5. AppKernel->registerBundles() /home/ubuntu/workspace/market_place/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:430
+[10-Aug-2016 07:22:46 UTC] PHP Fatal error:  Class 'FOS\UserBundle\FOSUserBundle' not found in /home/ubuntu/workspace/market_place/app/AppKernel.php on line 20
+[10-Aug-2016 07:22:46 UTC] PHP Stack trace:
+[10-Aug-2016 07:22:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/market_place/web/app_dev.php:0
+[10-Aug-2016 07:22:46 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/market_place/web/app_dev.php:33
+[10-Aug-2016 07:22:46 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/market_place/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:182
+[10-Aug-2016 07:22:46 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->initializeBundles() /home/ubuntu/workspace/market_place/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:130
+[10-Aug-2016 07:22:46 UTC] PHP   5. AppKernel->registerBundles() /home/ubuntu/workspace/market_place/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:430
+[10-Aug-2016 07:23:49 UTC] PHP Fatal error:  Class 'FOS\UserBundle\FOSUserBundle' not found in /home/ubuntu/workspace/market_place/app/AppKernel.php on line 20
+[10-Aug-2016 07:23:49 UTC] PHP Stack trace:
+[10-Aug-2016 07:23:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/market_place/web/app.php:0
+[10-Aug-2016 07:23:49 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/market_place/web/app.php:18
+[10-Aug-2016 07:23:49 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/market_place/app/bootstrap.php.cache:2529
+[10-Aug-2016 07:23:49 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->initializeBundles() /home/ubuntu/workspace/market_place/app/bootstrap.php.cache:2497
+[10-Aug-2016 07:23:49 UTC] PHP   5. AppKernel->registerBundles() /home/ubuntu/workspace/market_place/app/bootstrap.php.cache:2668
+[10-Aug-2016 07:31:44 UTC] PHP Fatal error:  Class 'FOS\UserBundle\FOSUserBundle' not found in /home/ubuntu/workspace/market_place/app/AppKernel.php on line 20
+[10-Aug-2016 07:31:44 UTC] PHP Stack trace:
+[10-Aug-2016 07:31:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/market_place/web/app.php:0
+[10-Aug-2016 07:31:44 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/market_place/web/app.php:18
+[10-Aug-2016 07:31:44 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/market_place/app/bootstrap.php.cache:2529
+[10-Aug-2016 07:31:44 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->initializeBundles() /home/ubuntu/workspace/market_place/app/bootstrap.php.cache:2497
+[10-Aug-2016 07:31:44 UTC] PHP   5. AppKernel->registerBundles() /home/ubuntu/workspace/market_place/app/bootstrap.php.cache:2668
+[10-Aug-2016 07:31:48 UTC] PHP Fatal error:  Class 'FOS\UserBundle\FOSUserBundle' not found in /home/ubuntu/workspace/market_place/app/AppKernel.php on line 20
+[10-Aug-2016 07:31:48 UTC] PHP Stack trace:
+[10-Aug-2016 07:31:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/market_place/web/app.php:0
+[10-Aug-2016 07:31:48 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/market_place/web/app.php:18
+[10-Aug-2016 07:31:48 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/market_place/app/bootstrap.php.cache:2529
+[10-Aug-2016 07:31:48 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->initializeBundles() /home/ubuntu/workspace/market_place/app/bootstrap.php.cache:2497
+[10-Aug-2016 07:31:48 UTC] PHP   5. AppKernel->registerBundles() /home/ubuntu/workspace/market_place/app/bootstrap.php.cache:2668
