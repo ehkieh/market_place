@@ -70,12 +70,14 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li>
                                 {% if app.user == null %}
-                                <a href="{{ path('fos_user_security_login') }}">
-                                    <button type="button" class="btn btn-primary">Login</button>
-                                </a>
+                                    <a href="{{ path('fos_user_security_login') }}">
+                                        <button type="button" class="btn btn-primary">Login
+                                    </a>
                                 {% else %}
                                     {{ app.user.username }}
-                                    <a href="#">Desconectar</a>
+                                    <a href="{{ path('fos_user_security_logout') }}">
+                                        <button type="button" class="btn btn-primary">Desconectar</button>
+                                    </a>
                                 {% endif %}
                             </li>
                             {% if app.user %}
@@ -87,6 +89,7 @@
                             {% endif %}
                         </ul>
                     </div>
+
                     <!--/.nav-collapse -->
                 </div>
                 <!-- /.container-fluid -->
