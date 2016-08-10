@@ -72,8 +72,9 @@ fos_user:
 
 easy_admin:
     entities:
+        Trayecto:
+            class: AppBundle\Entity\Trayecto
         Persona:
             class: AppBundle\Entity\Persona
-            class: AppBundle\Entity\Trayecto
             form:
                 fields: ['enabled', 'username', 'email', 'roles', 'lastLogin']
