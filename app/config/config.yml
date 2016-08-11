@@ -77,4 +77,4 @@ easy_admin:
         Persona:
             class: AppBundle\Entity\Persona
             form:
-                fields: ['enabled', 'username', 'email', 'roles', 'lastLogin']
+                fields: ['enabled', 'username', 'email', 'plainPassword', 'roles', 'lastLogin']
