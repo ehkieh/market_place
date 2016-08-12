@@ -71,11 +71,11 @@
                             <li>
                                 {% if app.user == null %}
                                     <a href="{{ path('fos_user_security_login') }}">
-                                        <button type="button" class="btn btn-primary">Login
+                                        <button type="button" class="btn btn-primary">Login</button>
                                     </a>
                                 {% else %}
-                                    {{ app.user.username }}
                                     <a href="{{ path('fos_user_security_logout') }}">
+                                        {{ app.user.username }}
                                         <button type="button" class="btn btn-primary">Desconectar</button>
                                     </a>
                                 {% endif %}
