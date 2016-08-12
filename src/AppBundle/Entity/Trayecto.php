@@ -1,22 +1,17 @@
 <?php
 namespace AppBundle\Entity;
-
-use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * @ORM\Entity
  * @ORM\Table(name="trayecto")
  */
-class Trayecto 
-{
+class Trayecto {
     /**
-    * @ORM\Column(type="integer")
-    * @ORM\Id
-    * @ORM\GeneratedValue(strategy="IDENTITY")
-    */
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
     protected $id;
-
     /**
      * @ORM\Column(type="string")
      */
@@ -49,54 +44,48 @@ class Trayecto
      * @ORM\Column(type="integer")
      */
     protected $plazas;
-    
     /**
      * @ORM\ManyToOne(targetEntity="Persona", inversedBy="trayectos")
      * @ORM\JoinColumn(name="persona_id", referencedColumnName="id")
      */
     protected $conductor;
-    
     /**
      * Rellena este objeto con una serie de datos pasados por parámetro
-     * 
-     * @ORM\return void
-     **/ 
+     *
+     * @return void
+     **/
     function llenarObjeto($p1, $p3, $p4, $p5, $p6, $p7, $p8, $p9, $p10) {
         $this->conductor = $p1;
         $this->origen = $p3;
         $this->destino = $p4;
         $this->calle = $p5;
-        $this->fechaPublicacion = new DateTime();
-        $this->fechaPublicacion = $p6;
+        $this->fechaPublicacion->setTimestamp($p6);
         $this->hora = $p7;
         $this->precio = $p8;
         $this->descripcion = $p9;
         $this->plazas = $p10;
     }
-    
     function getFechaPublicacion() {
         return $this->fechaPublicacion;
     }
-    
     /**
      * Devuelve la descripción corta (80 primeros caracteres) del objeto
-     * 
+     *
      * @return string
-     **/ 
+     **/
     function getDescripcionCorta() {
         $descripcionCorta = substr($this->descripcion, 0, 80);
         $descripcionFinal = $descripcionCorta . "...";
         return $descripcionFinal;
     }
-    
     /**
      * Comprueba si el origen pasado por parámetro coincide con el de nuestro objeto ($this)
      * Si coincide devolvemos true
      * Si no coincide devolvemos false
-     * 
-     * @ORM\return bool
-     * 
-     **/ 
+     *
+     * @return bool
+     *
+     **/
     function tieneOrigen($paramOrigen) {
         if ($paramOrigen == $this->origen) {
             return true;
@@ -104,11 +93,10 @@ class Trayecto
             return false;
         }
     }
-    
     /**
      * Copmrueba si el destino pasado por parámetro coincide con el de nuestro objeto ($this)
-     * 
-     * @ORM\return bool
+     *
+     * @return bool
      **/
     function tieneDestino($paramDestino) {
         if ($paramDestino == $this->destino) {
@@ -117,11 +105,10 @@ class Trayecto
             return false;
         }
     }
-    
     /**
      * Compara tanto si el origen coincide con el parámetro pasado o el destino
-     * 
-     * @ORM\return bool
+     *
+     * @return bool
      **/
     function buscar($param) {
         if ($this->tieneDestino($param) || $this->tieneOrigen($param)) {
@@ -130,12 +117,11 @@ class Trayecto
             return false;
         }
     }
-    
     /**
      * Comprueba si la fecha actual está dentro del filtro de fecha seleccionado
-     * 
-     * @ORM\return bool
-     **/ 
+     *
+     * @return bool
+     **/
     function filtroFecha($param) {
         if ($param == 0) {
             return true;
@@ -146,212 +132,183 @@ class Trayecto
             return ($diffDias <= $param);
         }
     }
-
     /**
      * Set id
      *
-     * @ORM\param integer $id
-     * @ORM\return Trayecto
+     * @param integer $id
+     * @return Trayecto
      */
     public function setId($id)
     {
         $this->id = $id;
-
         return $this;
     }
-
     /**
      * Get id
      *
-     * @ORM\return integer 
+     * @return integer
      */
     public function getId()
     {
         return $this->id;
     }
-
-
     /**
      * Set origen
      *
-     * @ORM\param string $origen
-     * @ORM\return Trayecto
+     * @param string $origen
+     * @return Trayecto
      */
     public function setOrigen($origen)
     {
         $this->origen = $origen;
-
         return $this;
     }
-
     /**
      * Get origen
      *
-     * @ORM\return string 
+     * @return string
      */
     public function getOrigen()
     {
         return $this->origen;
     }
-
     /**
      * Set destino
      *
-     * @ORM\param string $destino
-     * @ORM\return Trayecto
+     * @param string $destino
+     * @return Trayecto
      */
     public function setDestino($destino)
     {
         $this->destino = $destino;
-
         return $this;
     }
-
     /**
      * Get destino
      *
-     * @ORM\return string 
+     * @return string
      */
     public function getDestino()
     {
         return $this->destino;
     }
-
     /**
      * Set calle
      *
-     * @ORM\param string $calle
-     * @ORM\return Trayecto
+     * @param string $calle
+     * @return Trayecto
      */
     public function setCalle($calle)
     {
         $this->calle = $calle;
-
         return $this;
     }
-
     /**
      * Get calle
      *
-     * @ORM\return string 
+     * @return string
      */
     public function getCalle()
     {
         return $this->calle;
     }
-
     /**
      * Set fechaPublicacion
      *
-     * @ORM\param \DateTime $fechaPublicacion
-     * @ORM\return Trayecto
+     * @param \DateTime $fechaPublicacion
+     * @return Trayecto
      */
     public function setFechaPublicacion($fechaPublicacion)
     {
         $this->fechaPublicacion = $fechaPublicacion;
-
         return $this;
     }
-
     /**
      * Set hora
      *
-     * @ORM\param \DateTime $hora
-     * @ORM\return Trayecto
+     * @param \DateTime $hora
+     * @return Trayecto
      */
     public function setHora($hora)
     {
         $this->hora = $hora;
-
         return $this;
     }
-
     /**
      * Get hora
      *
-     * @ORM\return \DateTime 
+     * @return \DateTime
      */
     public function getHora()
     {
         return $this->hora;
     }
-
     /**
      * Set precio
      *
-     * @ORM\param float $precio
-     * @ORM\return Trayecto
+     * @param float $precio
+     * @return Trayecto
      */
     public function setPrecio($precio)
     {
         $this->precio = $precio;
-
         return $this;
     }
-
     /**
      * Get precio
      *
-     * @ORM\return float 
+     * @return float
      */
     public function getPrecio()
     {
         return $this->precio;
     }
-
     /**
      * Set descripcion
      *
-     * @ORM\param string $descripcion
-     * @ORM\return Trayecto
+     * @param string $descripcion
+     * @return Trayecto
+     * 
      */
     public function setDescripcion($descripcion)
     {
         $this->descripcion = $descripcion;
-
         return $this;
     }
-
     /**
      * Get descripcion
      *
-     * @ORM\return string 
+     * @return string
      */
     public function getDescripcion()
     {
         return $this->descripcion;
     }
-
     /**
      * Set plazas
      *
-     * @ORM\param integer $plazas
-     * @ORM\return Trayecto
+     * @param integer $plazas
+     * @return Trayecto
      */
     public function setPlazas($plazas)
     {
         $this->plazas = $plazas;
-
         return $this;
     }
-
     /**
      * Get plazas
      *
-     * @ORM\return integer 
+     * @return integer
      */
     public function getPlazas()
     {
         return $this->plazas;
     }
-    
-    
     public function setConductor($conductor)
     {
         $this->conductor=$conductor;
         return $this;
     }
-    
     public function getConductor(){
         return $this->conductor;
     }
