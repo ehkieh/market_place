@@ -122,16 +122,7 @@ class Trayecto {
      *
      * @return bool
      **/
-    function filtroFecha($param) {
-        if ($param == 0) {
-            return true;
-        } else {
-            $fechaHoy = new DateTime();
-            $diff = $fechaHoy->diff($this->fechaPublicacion);
-            $diffDias = $diff->format('%a');
-            return ($diffDias <= $param);
-        }
-    }
+    
     /**
      * Set id
      *
